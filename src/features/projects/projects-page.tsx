@@ -49,22 +49,24 @@ export function ProjectsPage({ activeTab }: ProjectsPageProps) {
   return (
     <div className="projects-page">
       <section className="projects-page-hero" aria-labelledby="all-projects-heading">
-        <Container>
+        <Container className="projects-page-hero-inner">
           <a className="projects-back-link" href="#work">
             <ArrowLeft size={16} aria-hidden="true" />
             <span>Back to Home</span>
           </a>
 
-          <p className="section-kicker section-kicker-light">
-            <span className="kicker-dash" aria-hidden="true" />
-            Complete Archive
-          </p>
-          <h1 id="all-projects-heading" className="projects-page-title">
-            All <span className="heading-accent">Projects</span>
-          </h1>
-          <p className="projects-page-lead">
-            Websites, web applications, mobile apps, and AI tools built end to end.
-          </p>
+          <div>
+            <p className="section-kicker section-kicker-light">
+              <span className="kicker-dash" aria-hidden="true" />
+              Complete Archive
+            </p>
+            <h1 id="all-projects-heading" className="projects-page-title">
+              All <span className="heading-accent">Projects</span>
+            </h1>
+            <p className="projects-page-lead">
+              Websites, web applications, mobile apps, and AI tools built end to end.
+            </p>
+          </div>
         </Container>
       </section>
 
