@@ -205,94 +205,182 @@
   color: var(--amber);
 }
 
-/* 3. Exploring the Tools & Tech Stack Behind My Builds — Exact Oval Capsules */
-.tools-section {
-  padding-block: 72px 48px;
+/* 3. Agile Workflow ("How I Build Software") Section */
+.workflow-section {
+  padding-block: 60px 44px;
 }
 
-.tools-header {
-  text-align: center;
-  margin-bottom: 44px;
-}
-
-.tools-group + .tools-group {
-  margin-top: 40px;
-}
-
-.tools-group-title {
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--muted);
-  margin-bottom: 22px;
-}
-
-.tools-capsules {
+.workflow-header {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px 16px;
+  gap: 14px;
+  align-items: end;
+  margin-bottom: 32px;
+}
+
+.workflow-lead {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+.workflow-grid {
+  display: grid;
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.tool-capsule {
+.workflow-step {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
+  padding-top: 18px;
+  border-top: 2px solid var(--line);
 }
 
-.tool-capsule-body {
-  width: 100%;
-  max-width: 144px;
-  min-height: 158px;
-  padding: 18px 12px 20px;
-  border-radius: 999px;
-  background: var(--surface);
+.workflow-step-top {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 12px;
+}
+
+.workflow-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--forest);
+  display: grid;
+  place-items: center;
+}
+
+:root[data-theme="dark"] .workflow-icon {
+  color: var(--amber);
+}
+
+.workflow-phase {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.workflow-step h3 {
+  font-size: 17px;
+  color: var(--foreground);
+}
+
+.workflow-step p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.workflow-habits {
+  margin: 28px 0 0;
+  padding: 14px 20px;
+  list-style: none;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 24px;
+}
+
+.workflow-habit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.workflow-habit-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  flex: 0 0 auto;
+}
+
+/* 4. Compact Icon-Driven Tech Stack & Tools Section */
+.tools-section {
+  padding-block: 44px 52px;
+  border-top: 1px solid var(--line);
+}
+
+.tools-header {
+  margin-bottom: 24px;
+}
+
+.tools-groups {
+  display: grid;
+  gap: 24px;
+}
+
+.tools-group-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tool-tile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
   transition: background-color var(--t-hover) ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .tool-capsule:hover .tool-capsule-body {
+  .tool-tile:hover {
     background: var(--surface-strong);
   }
 }
 
-.tool-capsule-icon {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  background: var(--canvas);
-  color: var(--forest);
+.tool-tile-icon {
   display: grid;
   place-items: center;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: var(--canvas);
+  color: var(--forest);
+  flex: 0 0 28px;
 }
 
-:root[data-theme="dark"] .tool-capsule-icon {
+:root[data-theme="dark"] .tool-tile-icon {
   color: var(--amber);
 }
 
-.tool-capsule-role {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--muted);
-  text-align: center;
+.tool-tile-svg {
+  display: block;
+  width: 16px;
+  height: 16px;
 }
 
-.tool-capsule-name {
-  font-size: 14px;
+.tool-tile-name {
+  font-size: 13.5px;
   font-weight: 600;
   color: var(--foreground);
-  text-align: center;
+  line-height: 1.2;
+  min-width: 0;
 }
 
 /* Optional Experience section */
@@ -311,7 +399,11 @@
 }
 
 @media (min-width: 640px) {
-  .tools-capsules {
+  .workflow-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .tools-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -335,14 +427,25 @@
     width: 340px;
     height: 340px;
   }
+  .workflow-section {
+    padding-block: 72px 52px;
+  }
+  .workflow-header {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 32px;
+  }
+  .workflow-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
   .tools-section {
-    padding-block: 84px 52px;
+    padding-block: 52px 60px;
   }
-  .tools-capsules {
+  .tools-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 28px 20px;
+    gap: 12px;
   }
-  .tools-capsules-compact {
+  .tools-grid-compact {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
   .experience-item {

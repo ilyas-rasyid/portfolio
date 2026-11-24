@@ -17,15 +17,8 @@ export function IntroductionContent() {
           </span>
         </span>
         <span className="hero-title-mask">
-          <span className="hero-title-line hero-title-line-2">{profile.role}</span>
+          <span className="hero-title-line hero-title-line-2">{profile.role}.</span>
         </span>
-        {profile.location && (
-          <span className="hero-title-mask">
-            <span className="hero-title-line hero-title-line-3">
-              Based in {profile.location}.
-            </span>
-          </span>
-        )}
       </h1>
       <p className="intro-description">{profile.introduction}</p>
     </div>

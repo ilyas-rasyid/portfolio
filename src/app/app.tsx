@@ -2,6 +2,7 @@ import { PageLayout } from "@/components/layout/page-layout";
 import { IntroductionSection } from "@/features/introduction/introduction-section";
 import { ServicesSection } from "@/features/services/services-section";
 import { AboutSection } from "@/features/about/about-section";
+import { WorkflowSection } from "@/features/workflow/workflow-section";
 import { SkillsSection } from "@/features/skills/skills-section";
 import { ProjectsSection } from "@/features/projects/projects-section";
 import { ExperienceSection } from "@/features/experience/experience-section";
@@ -17,6 +18,7 @@ const navigation = visibleItems(
       label: "About",
       enabled: siteConfig.sections.about && about.length > 0,
     },
+    { id: "process", label: "Process", enabled: true },
     { id: "skills", label: "Tools", enabled: siteConfig.sections.skills },
     { id: "work", label: "Work", enabled: true },
   ],
@@ -29,6 +31,7 @@ export function App() {
       <IntroductionSection />
       <ServicesSection />
       <AboutSection />
+      <WorkflowSection />
       <SkillsSection />
       <ProjectsSection />
       <ExperienceSection />

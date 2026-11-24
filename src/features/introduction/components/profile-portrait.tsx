@@ -17,7 +17,9 @@ export function ProfilePortrait() {
             />
           </defs>
           <text className="hero-stamp-text">
-            <textPath href="#stamp-circle">FULL STACK DEVELOPER • INDONESIA •</textPath>
+            <textPath href="#stamp-circle" textLength="196">
+              FULL STACK DEVELOPER • WEB &amp; APPS •
+            </textPath>
           </text>
         </svg>
         <span className="hero-stamp-core" />
