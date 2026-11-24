@@ -21,7 +21,7 @@ const agilePhases = [
     phase: "Verify",
     title: "Review & Testing",
     description:
-      "Keep codebases dependable with strict TypeScript checks, Vitest unit tests, Playwright E2E flows, and clean reviews.",
+      "Keep codebases dependable with strict TypeScript checks, Vitest unit tests, and thorough code reviews.",
   },
   {
     icon: RefreshCw,

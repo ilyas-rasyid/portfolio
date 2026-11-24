@@ -1,15 +1,18 @@
 import type { SkillGroup } from "../types/skill";
 
 export const skills: readonly SkillGroup[] = [
-  { label: "Languages", technologies: ["TypeScript", "JavaScript", "Dart", "SQL"] },
+  {
+    label: "Languages",
+    technologies: ["HTML", "CSS", "JavaScript", "TypeScript", "Python", "Dart", "SQL"],
+  },
   {
     label: "Frontend",
     technologies: ["React", "Vite", "Tailwind CSS", "TanStack Query", "Flutter"],
   },
   { label: "Backend", technologies: ["Bun", "ElysiaJS", "Prisma", "REST APIs"] },
-  { label: "Database", technologies: ["PostgreSQL", "Hive"] },
+  { label: "Database", technologies: ["PostgreSQL", "MongoDB", "Hive"] },
   {
-    label: "Tools & Infrastructure",
-    technologies: ["Git", "GitHub", "Docker", "Linux"],
+    label: "Design, Workflow & Infra",
+    technologies: ["Figma", "Git", "GitHub", "Docker", "Linux", "Vitest"],
   },
 ];
