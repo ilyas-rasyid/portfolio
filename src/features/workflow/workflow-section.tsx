@@ -35,7 +35,7 @@ const agilePhases = [
 const agileHabits = [
   "Vertical-slice delivery",
   "User-story backlog",
-  "Automated QA each sprint",
+  "CI/CD & automated QA",
   "Direct feedback loops",
 ] as const;
 

@@ -12,6 +12,7 @@ export interface Project {
   category:
     | "Website"
     | "Web Application"
+    | "Mobile Application"
     | "Flutter App"
     | "AI / Computer Vision"
     | "Full Stack"

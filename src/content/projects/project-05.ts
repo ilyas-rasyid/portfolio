@@ -5,7 +5,7 @@ export const project = {
   title: "Komorebi Notes",
   description:
     "Offline-first personal notes application built with Flutter and BLoC/Cubit, featuring color-coded custom categories, rich note editing, filtering, lifecycle archiving, and local Hive storage.",
-  category: "Flutter App",
+  category: "Mobile Application",
   technologies: ["Flutter", "Dart", "BLoC / Cubit", "Hive"],
   screenshots: [
     {

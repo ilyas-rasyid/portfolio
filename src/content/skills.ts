@@ -13,6 +13,6 @@ export const skills: readonly SkillGroup[] = [
   { label: "Database", technologies: ["PostgreSQL", "MongoDB", "Hive"] },
   {
     label: "Design, Workflow & Infra",
-    technologies: ["Figma", "Git", "GitHub", "Docker", "Linux", "Vitest"],
+    technologies: ["Figma", "Git", "GitHub", "CI/CD", "Docker", "Linux", "Vitest"],
   },
 ];

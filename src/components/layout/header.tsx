@@ -9,9 +9,16 @@ import { Container } from "./container";
 import { DesktopNavigation } from "./desktop-navigation";
 import { MobileNavigation } from "./mobile-navigation";
 
-export function Header({ items }: { items: readonly NavigationItem[] }) {
+export function Header({
+  items,
+  activeOverride,
+}: {
+  items: readonly NavigationItem[];
+  activeOverride?: string;
+}) {
   const ids = useMemo(() => items.map((item) => item.id), [items]);
-  const active = useActiveSection(ids);
+  const observed = useActiveSection(ids);
+  const active = activeOverride ?? observed;
 
   return (
     <header className="site-header">

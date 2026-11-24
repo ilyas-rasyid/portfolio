@@ -7,12 +7,16 @@ import { SkipLink } from "./skip-link";
 export function PageLayout({
   children,
   items,
-}: PropsWithChildren<{ items: readonly NavigationItem[] }>) {
+  activeOverride,
+}: PropsWithChildren<{
+  items: readonly NavigationItem[];
+  activeOverride?: string;
+}>) {
   return (
     <>
       <div id="top" />
       <SkipLink />
-      <Header items={items} />
+      <Header items={items} activeOverride={activeOverride} />
       <main id="main-content" tabIndex={-1} className="min-w-0">
         {children}
       </main>

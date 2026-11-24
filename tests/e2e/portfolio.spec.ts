@@ -10,8 +10,16 @@ test.beforeEach(async ({ page }) => {
 test("E2E-001 homepage", async ({ page }) => {
   await expect(page.locator("h1")).toContainText(profile.name);
 });
-test("E2E-002 all projects", async ({ page }) => {
+test("E2E-002 project tabs, homepage cap, and full projects page", async ({ page }) => {
+  await expect(page.locator(".project-item")).toHaveCount(Math.min(projects.length, 5));
+  await page.getByRole("tab", { name: /Website/ }).click();
+  await expect(page.locator(".project-item")).toHaveCount(1);
+  await page.getByRole("tab", { name: /All/ }).click();
+  await page.getByRole("link", { name: /View All Projects \(/ }).click();
+  await expect(page).toHaveURL(/#\/projects$/);
   await expect(page.locator(".project-item")).toHaveCount(projects.length);
+  await page.getByRole("link", { name: "Back to Home" }).click();
+  await expect(page).toHaveURL(/#work$/);
 });
 test("E2E-003 navigation", async ({ page }) => {
   await page
@@ -89,6 +97,11 @@ test("E2E-011 résumé availability", async ({ page }) => {
   }
 });
 test("E2E-012 repository destinations", async ({ page }) => {
+  if (socialLinks.github)
+    await expect(
+      page.getByRole("link", { name: "GitHub profile" }).first(),
+    ).toHaveAttribute("href", socialLinks.github);
+  await page.goto("./#/projects");
   for (const project of projects) {
     const link = page.getByRole("link", {
       name: `View source code for ${project.title}`,
@@ -97,10 +110,6 @@ test("E2E-012 repository destinations", async ({ page }) => {
       await expect(link).toHaveAttribute("href", project.repositoryUrl);
     else await expect(link).toHaveCount(0);
   }
-  if (socialLinks.github)
-    await expect(
-      page.getByRole("link", { name: "GitHub profile" }).first(),
-    ).toHaveAttribute("href", socialLinks.github);
 });
 test("E2E-013 no runtime error", async ({ page }) => {
   const errors: string[] = [];

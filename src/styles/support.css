@@ -446,12 +446,18 @@
     gap: 12px;
   }
   .tools-grid-compact {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .experience-item {
     grid-template-columns: 1fr auto;
   }
   .experience-description {
     grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tools-grid-compact {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 }

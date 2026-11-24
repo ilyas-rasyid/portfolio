@@ -41,7 +41,7 @@ export function ServicesSection() {
             </h2>
           </div>
 
-          <a className="split-cta" href="#work">
+          <a className="split-cta" href="#/projects">
             <span className="split-cta-label">View All Projects</span>
             <span className="split-cta-circle" aria-hidden="true">
               <ArrowRight size={15} />
