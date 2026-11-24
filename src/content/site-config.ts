@@ -5,6 +5,6 @@ export const siteConfig = {
   siteUrl: "https://ilyas-rasyid.github.io/portfolio/",
   description:
     "Personal portfolio of Ilyas Rasyid, Full Stack Developer. Selected web applications, technical skills, and professional background.",
-  socialImage: "images/social/preview.png",
+  socialImage: "",
   sections: { experience: true, about: true, skills: true, contact: true },
 } as const;

@@ -36,7 +36,7 @@ for (const project of projects) {
 }
 if (profile.portrait) checkAsset(profile.portrait.src, "Portrait");
 if (profile.resume) checkAsset(profile.resume, "Résumé");
-checkAsset(siteConfig.socialImage, "Social preview");
+if (siteConfig.socialImage) checkAsset(siteConfig.socialImage, "Social preview");
 if (publish) {
   if (!siteConfig.publicationReady)
     errors.push("Set publicationReady only after reviewing all content");

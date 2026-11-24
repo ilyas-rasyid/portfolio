@@ -1,24 +1,20 @@
-@import "tailwindcss";
+@import "tailwindcss" source("../");
 
 @import "./tokens.css";
-
 @import "./typography.css";
-
 @import "./animations.css";
-
 @import "./layout.css";
-
 @import "./components.css";
-
 @import "./projects.css";
 @import "./lightbox.css";
-
 @import "./support.css";
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 24px);
   background: var(--canvas);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
 }
 
 body {
@@ -28,14 +24,43 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   transition:
-    background-color var(--normal),
-    color var(--normal);
+    background-color var(--t-ui) ease,
+    color var(--t-ui) ease;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: inherit;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: var(--scrollbar-thumb);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 button,
@@ -57,7 +82,7 @@ button:focus-visible,
 a:focus-visible,
 [tabindex]:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 4px;
+  outline-offset: 3px;
 }
 
 img {
@@ -71,5 +96,5 @@ img {
 
 ::selection {
   background: var(--accent);
-  color: var(--canvas);
+  color: var(--accent-ink);
 }

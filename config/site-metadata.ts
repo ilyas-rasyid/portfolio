@@ -14,7 +14,10 @@ export function siteMetadata(): Plugin {
   const url = siteConfig.siteUrl.trim();
   const baseUrl = url ? new URL(url.endsWith("/") ? url : `${url}/`) : null;
   const title = `${profile.name} — ${profile.role}`;
-  const image = baseUrl ? new URL(siteConfig.socialImage, baseUrl).href : null;
+  const image =
+    baseUrl && siteConfig.socialImage.trim()
+      ? new URL(siteConfig.socialImage, baseUrl).href
+      : null;
 
   return {
     name: "portfolio-metadata",
@@ -36,11 +39,13 @@ export function siteMetadata(): Plugin {
             content: siteConfig.publicationReady ? "index, follow" : "noindex, nofollow",
           },
         },
-        ...(baseUrl && image
+        ...(baseUrl
           ? [
               { tag: "link", attrs: { rel: "canonical", href: baseUrl.href } },
               { tag: "meta", attrs: { property: "og:url", content: baseUrl.href } },
-              { tag: "meta", attrs: { property: "og:image", content: image } },
+              ...(image
+                ? [{ tag: "meta", attrs: { property: "og:image", content: image } }]
+                : []),
               {
                 tag: "script",
                 attrs: { type: "application/ld+json" },

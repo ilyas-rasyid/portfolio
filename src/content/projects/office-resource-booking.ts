@@ -10,12 +10,12 @@ export const project = {
   technologies: ["React", "TypeScript", "Bun", "PostgreSQL"],
   screenshots: [
     {
-      src: "images/projects/office-resource-booking/preview-1.svg",
+      src: "images/projects/orb/preview-1.svg",
       alt: "Illustrative wireframe for Office Resource Booking, view 1",
       caption: "Overview",
     },
     {
-      src: "images/projects/office-resource-booking/preview-2.svg",
+      src: "images/projects/orb/preview-2.svg",
       alt: "Illustrative wireframe for Office Resource Booking, view 2",
       caption: "Records",
     },

@@ -9,9 +9,8 @@ export function ProjectsSection() {
       <Container>
         <SectionHeading
           id="work-heading"
-          label="Portfolio"
           title="Selected work"
-          detail={`${String(projects.length).padStart(2, "0")} Projects`}
+          detail={`${projects.length} projects`}
         />
         <ProjectList projects={projects} />
       </Container>

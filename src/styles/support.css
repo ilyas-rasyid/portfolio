@@ -1,44 +1,64 @@
 .support-section {
-  padding-block: 44px;
-}
-
-.support-section > .container-shell {
-  border-top: 1px solid var(--line);
-  padding-top: 36px;
+  padding-block: 52px;
 }
 
 .split-section {
   display: grid;
-  gap: 16px;
+  gap: 20px;
+  align-items: start;
+}
+
+.split-section .section-heading {
+  margin-bottom: 0;
 }
 
 .about-copy {
   display: grid;
-  gap: 18px;
-  font-size: 17px;
+  gap: 16px;
+  font-size: 16px;
   color: var(--muted);
-  max-width: 65ch;
+  max-width: 62ch;
+}
+
+.about-lead {
+  font-size: clamp(19px, 2.2vw, 23px);
+  line-height: 1.48;
+  font-weight: 500;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+}
+
+/* Open editorial Technical Expertise — zero bento cards, zero pill badges */
+.skills-intro {
+  display: grid;
+  gap: 10px;
+}
+
+.skills-subtitle {
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 34ch;
 }
 
 .skill-list {
+  display: grid;
+  gap: 8px;
   margin: 0;
 }
 
 .skill-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
-  padding-block: 16px;
-  gap: 16px;
-  border-bottom: 1px solid var(--line);
-  font-size: 14px;
-}
-
-.skill-row:first-child {
-  border-top: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 4px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  font-size: 15px;
 }
 
 .skill-row dt {
-  font-weight: 550;
+  font-weight: 600;
+  color: var(--foreground);
 }
 
 .skill-row dd {
@@ -51,7 +71,6 @@
   display: grid;
   gap: 12px;
   padding-block: 20px;
-  border-bottom: 1px solid var(--line);
 }
 
 .experience-item h3 {
@@ -62,30 +81,29 @@
   color: var(--muted);
 }
 
+/* Inverted chapter field for Contact — full-bleed solid tone, zero glow, zero border */
 .contact-section {
-  margin-top: 36px;
-  background: var(--contact);
-  color: var(--contact-text);
-  padding-block: 56px;
+  margin-top: 40px;
+  background: var(--invert-bg);
+  color: var(--invert-ink);
+  padding-block: 60px;
 }
 
 .contact-inner {
   display: grid;
-  gap: 36px;
+  gap: 32px;
+  align-items: start;
 }
 
-.contact-inner .eyebrow {
-  color: var(--contact-muted);
-  margin-bottom: 12px;
-}
-
-.contact-inner h2 + p {
-  margin-top: 16px;
-  color: var(--contact-muted);
+.contact-copy h2 + p {
+  margin-top: 12px;
+  color: var(--invert-muted);
+  max-width: 40ch;
 }
 
 .contact-links {
   display: grid;
+  gap: 4px;
 }
 
 .contact-link {
@@ -94,25 +112,27 @@
   gap: 12px;
   justify-content: flex-start;
   min-height: 48px;
-  border-bottom: 1px solid #506256;
+  padding-inline: 14px;
+  border-radius: var(--radius-sm);
   overflow-wrap: anywhere;
+  color: var(--invert-ink);
+  transition: background-color var(--t-hover) ease;
 }
 
 .contact-link .link-arrow {
   margin-left: auto;
+  color: var(--invert-muted);
 }
 
-.contact-link:hover {
-  text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+  .contact-link:hover {
+    background: var(--invert-hover);
+    text-decoration: none;
+  }
 }
 
 .contact-link svg {
   flex-shrink: 0;
-}
-
-.contact-link:focus-visible,
-.contact-section button:focus-visible {
-  outline-color: #9dbbaa;
 }
 
 .copy-email {
@@ -120,20 +140,29 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
-  font-size: 12px;
+  padding-inline: 14px;
+  font-size: 13px;
 }
 
 .copy-button {
-  color: var(--contact-muted);
+  color: var(--invert-muted);
   background: transparent;
   border: 0;
 }
 
 @media (min-width: 768px) {
+  .support-section {
+    padding-block: 68px;
+  }
   .split-section,
   .contact-inner {
     grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
-    gap: 48px;
+    gap: 52px;
+  }
+  .skill-row {
+    grid-template-columns: minmax(0, 180px) minmax(0, 1fr);
+    gap: 20px;
+    align-items: baseline;
   }
   .experience-item {
     grid-template-columns: 1fr auto;
@@ -141,10 +170,8 @@
   .experience-description {
     grid-column: 1 / -1;
   }
-  .support-section {
-    padding-block: 48px;
-  }
   .contact-section {
+    margin-top: 56px;
     padding-block: 72px;
   }
 }

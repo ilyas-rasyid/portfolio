@@ -9,9 +9,14 @@ export const project = {
   technologies: [],
   screenshots: [
     {
-      src: "images/projects/project-04/preview-1.svg",
-      alt: "Illustrative wireframe for Project 04, view 1",
+      src: "images/projects/pvms/image.png",
+      alt: "PVMS preview 1",
       caption: "Overview",
+    },
+    {
+      src: "images/projects/pvms/image2.png",
+      alt: "PVMS preview 2",
+      caption: "Dashboard",
     },
   ],
   repositoryUrl: "",

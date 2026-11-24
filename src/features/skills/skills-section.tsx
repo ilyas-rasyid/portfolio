@@ -9,7 +9,13 @@ export function SkillsSection() {
   return (
     <section id="skills" className="support-section" aria-labelledby="skills-heading">
       <Container className="split-section">
-        <SectionHeading id="skills-heading" label="Toolkit" title="Technical expertise" />
+        <div className="skills-intro">
+          <SectionHeading id="skills-heading" title="Technical expertise" />
+          <p className="skills-subtitle">
+            Technologies used across frontend interfaces, backend services, and data
+            layers.
+          </p>
+        </div>
         <dl className="skill-list">
           {skills.map((group) => (
             <SkillGroup key={group.label} group={group} />

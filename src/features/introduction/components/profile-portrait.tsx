@@ -5,17 +5,14 @@ import { assetUrl } from "@/lib/asset-url";
 export function ProfilePortrait() {
   if (!profile.portrait) return null;
   return (
-    <figure className="portrait hero-enter">
+    <figure className="portrait">
       <Image
         src={assetUrl(profile.portrait.src)}
         alt={profile.portrait.alt}
-        width={480}
-        height={640}
+        width={229}
+        height={401}
         fetchPriority="high"
       />
-      <figcaption className="mono-label">
-        {profile.name} {profile.location && ` / ${profile.location}`}
-      </figcaption>
     </figure>
   );
 }

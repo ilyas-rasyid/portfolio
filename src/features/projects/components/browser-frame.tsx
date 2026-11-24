@@ -27,15 +27,6 @@ export function BrowserFrame({
       onClick={onOpen}
       aria-label={`Enlarge ${title} screenshot`}
     >
-      <span className="browser-bar" aria-hidden="true">
-        <span className="browser-dots">
-          <i />
-          <i />
-          <i />
-        </span>
-        <span className="browser-label">{title}</span>
-        <Maximize2 size={14} />
-      </span>
       <span className="browser-image">
         <Image
           key={screenshot.src}
@@ -47,6 +38,10 @@ export function BrowserFrame({
           decoding="async"
           className="gallery-enter"
         />
+      </span>
+      <span className="browser-bar" aria-hidden="true">
+        <span className="browser-label">{screenshot.caption || title}</span>
+        <Maximize2 size={14} />
       </span>
     </button>
   );

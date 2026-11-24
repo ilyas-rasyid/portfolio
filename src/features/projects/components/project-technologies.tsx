@@ -4,5 +4,5 @@ export function ProjectTechnologies({
   technologies: readonly string[];
 }) {
   if (!technologies.length) return null;
-  return <p className="project-technologies">{technologies.join(" · ")}</p>;
+  return <p className="project-technologies">{technologies.join(", ")}</p>;
 }

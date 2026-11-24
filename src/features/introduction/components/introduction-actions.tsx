@@ -6,8 +6,7 @@ import { assetUrl } from "@/lib/asset-url";
 export function IntroductionActions() {
   return (
     <div className="intro-actions-container">
-      {/* Social media links positioned directly above View my work */}
-      <div className="intro-socials hero-enter" aria-label="Social profiles">
+      <div className="intro-socials" aria-label="Social profiles">
         {socialLinks.linkedin && (
           <a
             href={socialLinks.linkedin}
@@ -17,7 +16,7 @@ export function IntroductionActions() {
             title="LinkedIn profile"
             className="social-icon-btn"
           >
-            <Linkedin size={18} />
+            <Linkedin size={19} />
           </a>
         )}
         {socialLinks.instagram && (
@@ -29,7 +28,7 @@ export function IntroductionActions() {
             title="Instagram profile"
             className="social-icon-btn"
           >
-            <Instagram size={18} />
+            <Instagram size={19} />
           </a>
         )}
         {socialLinks.github && (
@@ -41,18 +40,18 @@ export function IntroductionActions() {
             title="GitHub profile"
             className="social-icon-btn"
           >
-            <Github size={18} />
+            <Github size={19} />
           </a>
         )}
       </div>
 
-      <div className="intro-actions hero-enter">
+      <div className="intro-actions">
         <a className="primary-link" href="#work">
-          View my work <ArrowDownRight size={19} className="link-arrow-down" />
+          View my work <ArrowDownRight size={17} aria-hidden="true" />
         </a>
         {profile.resume && (
           <a className="inline-link" href={assetUrl(profile.resume)} download>
-            <FileDown size={17} /> Résumé
+            <FileDown size={17} aria-hidden="true" /> Résumé
           </a>
         )}
       </div>

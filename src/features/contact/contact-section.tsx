@@ -22,12 +22,11 @@ export function ContactSection() {
   return (
     <section id="contact" className="contact-section" aria-labelledby="contact-heading">
       <Container className="contact-inner">
-        <div>
-          <p className="eyebrow">Contact</p>
-          <h2 id="contact-heading">Let's get in touch.</h2>
+        <div className="contact-copy">
+          <h2 id="contact-heading">Get in touch</h2>
           <p>
             {profile.available
-              ? "Open to software development opportunities."
+              ? "Open to full-stack software development opportunities."
               : "Connect with me through the links below."}
           </p>
         </div>

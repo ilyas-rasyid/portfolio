@@ -10,12 +10,12 @@ export const project = {
   technologies: ["React", "TypeScript", "Bun", "PostgreSQL"],
   screenshots: [
     {
-      src: "images/projects/mini-issue-tracker/preview-1.svg",
+      src: "images/projects/mit/preview-1.svg",
       alt: "Illustrative wireframe for Mini Issue Tracker, view 1",
       caption: "Overview",
     },
     {
-      src: "images/projects/mini-issue-tracker/preview-2.svg",
+      src: "images/projects/mit/preview-2.svg",
       alt: "Illustrative wireframe for Mini Issue Tracker, view 2",
       caption: "Records",
     },
