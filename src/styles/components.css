@@ -74,7 +74,7 @@
   transform: translate(3px, -3px);
 }
 
-/* Single-button theme switcher */
+/* Single-button theme switcher matching header icon-button style */
 .theme-switcher {
   display: inline-flex;
   align-items: center;
@@ -83,26 +83,28 @@
 .theme-toggle-btn {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  color: var(--muted);
-  background: var(--mat);
-  border: 1px solid var(--line);
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  background: transparent;
+  color: var(--foreground);
+  border: 0;
+  border-radius: 4px;
   cursor: pointer;
-  transition: all var(--fast) var(--ease-out);
+  transition:
+    background var(--fast),
+    color var(--fast);
 }
 
 .theme-toggle-btn:hover {
+  background: var(--mat);
   color: var(--foreground);
-  background: var(--surface);
-  border-color: var(--accent);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transform: none;
+  box-shadow: none;
 }
 
 .theme-toggle-btn:active {
-  transform: translateY(0);
+  transform: scale(0.95);
 }
 
 .theme-toggle-icon-wrap {
@@ -115,38 +117,36 @@
 }
 
 .theme-toggle-btn:hover .theme-toggle-icon.is-sun {
-  transform: rotate(45deg) scale(1.08);
+  transform: rotate(45deg);
 }
 
 .theme-toggle-btn:hover .theme-toggle-icon.is-moon {
-  transform: rotate(-15deg) scale(1.08);
+  transform: rotate(-15deg);
 }
 
 /* Social icons above View My Work */
 .intro-socials {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .social-icon-btn {
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
   color: var(--muted);
-  background: var(--mat);
-  border: 1px solid var(--line);
+  background: transparent;
+  border: 0;
   transition: all var(--fast) var(--spring-ease);
 }
 
 .social-icon-btn:hover {
   color: var(--foreground);
-  background: var(--surface);
-  border-color: var(--accent);
+  background: var(--mat);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .social-icon-btn:active {

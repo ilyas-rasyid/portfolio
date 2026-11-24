@@ -13,16 +13,16 @@ export function ThemeSwitcher() {
     <div className="theme-switcher">
       <button
         type="button"
-        className="theme-toggle-btn"
+        className="icon-button theme-toggle-btn"
         aria-label={isDark ? "Light theme" : "Dark theme"}
         title={isDark ? "Switch to light theme" : "Switch to dark theme"}
         onClick={toggleTheme}
       >
         <span className="theme-toggle-icon-wrap" aria-hidden="true">
           {isDark ? (
-            <Sun size={18} className="theme-toggle-icon is-sun" />
+            <Sun size={19} className="theme-toggle-icon is-sun" />
           ) : (
-            <Moon size={18} className="theme-toggle-icon is-moon" />
+            <Moon size={19} className="theme-toggle-icon is-moon" />
           )}
         </span>
       </button>
