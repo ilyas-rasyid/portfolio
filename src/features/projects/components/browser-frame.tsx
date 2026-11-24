@@ -39,8 +39,7 @@ export function BrowserFrame({
           className="gallery-enter"
         />
       </span>
-      <span className="browser-bar" aria-hidden="true">
-        <span className="browser-label">{screenshot.caption || title}</span>
+      <span className="browser-zoom" aria-hidden="true">
         <Maximize2 size={14} />
       </span>
     </button>
