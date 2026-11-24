@@ -8,6 +8,7 @@ export interface ProjectTab {
 }
 
 export const HOME_PROJECT_LIMIT = 5;
+export const PROJECTS_PER_PAGE = 10;
 
 export const projectTabs: readonly ProjectTab[] = [
   { id: "all", label: "All" },

@@ -18,6 +18,13 @@ test("E2E-002 project tabs, homepage cap, and full projects page", async ({ page
   await page.getByRole("link", { name: /View All Projects \(/ }).click();
   await expect(page).toHaveURL(/#\/projects$/);
   await expect(page.locator(".project-item")).toHaveCount(projects.length);
+  const searchInput = page.getByRole("searchbox", {
+    name: "Search projects by name",
+  });
+  await searchInput.fill("Rotenbi");
+  await expect(page.locator(".project-item")).toHaveCount(1);
+  await page.getByRole("button", { name: "Clear search" }).click();
+  await expect(page.locator(".project-item")).toHaveCount(projects.length);
   await page.getByRole("link", { name: "Back to Home" }).click();
   await expect(page).toHaveURL(/#work$/);
 });
