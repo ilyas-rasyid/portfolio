@@ -207,11 +207,10 @@
 
 /* Minimal open footer with horizontally centered copyright */
 .site-footer {
-  padding-block: 28px;
+  padding-block: 32px;
 }
 
 .footer-inner {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,21 +221,6 @@
 
 .footer-copyright {
   text-align: center;
-}
-
-.footer-back-to-top {
-  position: absolute;
-  right: 0;
-}
-
-@media (max-width: 640px) {
-  .footer-inner {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .footer-back-to-top {
-    position: static;
-  }
 }
 
 @media (max-width: 374px) {

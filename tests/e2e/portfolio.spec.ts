@@ -122,7 +122,6 @@ test("E2E-014 production asset paths", async ({ page }) => {
     )
     .toBe(true);
 });
-test("E2E-015 back to top", async ({ page }) => {
-  await page.getByRole("link", { name: "Back to top" }).click();
-  await expect.poll(() => page.evaluate(() => scrollY)).toBeLessThanOrEqual(2);
+test("E2E-015 footer copyright visible", async ({ page }) => {
+  await expect(page.locator(".site-footer")).toContainText(profile.name);
 });

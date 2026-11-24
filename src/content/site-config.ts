@@ -6,5 +6,5 @@ export const siteConfig = {
   description:
     "Personal portfolio of Ilyas Rasyid, Full Stack Developer. Selected web applications, technical skills, and professional background.",
   socialImage: "",
-  sections: { experience: true, about: true, skills: true, contact: true },
+  sections: { experience: true, about: true, skills: true, contact: false },
 } as const;
