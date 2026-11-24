@@ -8,7 +8,10 @@ export const profile: Profile = {
     "I build practical web applications and reliable backend systems with a focus on performance and maintainability.",
   location: "Indonesia",
   available: true,
-  // Add your real portrait and résumé before publication, if desired.
-  // portrait: { src: "images/profile/portrait.webp", alt: "Portrait of Ilyas Rasyid" },
+  portrait: {
+    src: "images/profile/profile-photo-removebg.png",
+    alt: "Portrait of Ilyas Rasyid",
+  },
+  // Add your real résumé before publication, if desired.
   // resume: "resume/ilyas-rasyid.pdf",
 };
