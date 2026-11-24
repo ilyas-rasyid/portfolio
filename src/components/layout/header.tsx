@@ -16,8 +16,11 @@ export function Header({
   items: readonly NavigationItem[];
   activeOverride?: string;
 }) {
-  const ids = useMemo(() => items.map((item) => item.id), [items]);
-  const observed = useActiveSection(ids);
+  const sectionIds = useMemo(
+    () => items.filter((item) => !item.href).map((item) => item.id),
+    [items],
+  );
+  const observed = useActiveSection(sectionIds, !activeOverride);
   const active = activeOverride ?? observed;
 
   return (

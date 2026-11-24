@@ -27,6 +27,7 @@ const navigation = visibleItems(
     { id: "process", label: "Process", enabled: true },
     { id: "skills", label: "Tools", enabled: siteConfig.sections.skills },
     { id: "work", label: "Work", enabled: true },
+    { id: "all-projects", label: "All Projects", href: "#/projects", enabled: true },
   ],
   (item) => item.enabled,
 );
@@ -80,7 +81,7 @@ export function App() {
 
   if (route.page === "projects") {
     return (
-      <PageLayout items={navigation} activeOverride="work">
+      <PageLayout items={navigation} activeOverride="all-projects">
         <ProjectsPage activeTab={route.tab} />
       </PageLayout>
     );

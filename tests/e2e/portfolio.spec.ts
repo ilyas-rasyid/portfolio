@@ -25,8 +25,16 @@ test("E2E-002 project tabs, homepage cap, and full projects page", async ({ page
   await expect(page.locator(".project-item")).toHaveCount(1);
   await page.getByRole("button", { name: "Clear search" }).click();
   await expect(page.locator(".project-item")).toHaveCount(projects.length);
-  await page.getByRole("link", { name: "Back to Home" }).click();
-  await expect(page).toHaveURL(/#work$/);
+  await page
+    .getByRole("navigation", { name: "Main navigation" })
+    .getByRole("link", { name: "Services" })
+    .click();
+  await expect(page).toHaveURL(/#services$/);
+  await expect(
+    page
+      .getByRole("navigation", { name: "Main navigation" })
+      .getByRole("link", { name: "Services" }),
+  ).toHaveAttribute("aria-current", "location");
 });
 test("E2E-003 navigation", async ({ page }) => {
   await page

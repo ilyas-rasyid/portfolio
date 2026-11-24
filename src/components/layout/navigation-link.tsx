@@ -9,7 +9,7 @@ interface NavigationLinkProps {
 export function NavigationLink({ item, active, onSelect }: NavigationLinkProps) {
   return (
     <a
-      href={`#${item.id}`}
+      href={item.href ?? `#${item.id}`}
       className="nav-link"
       aria-current={active ? "location" : undefined}
       onClick={onSelect}

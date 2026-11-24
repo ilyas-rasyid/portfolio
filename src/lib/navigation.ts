@@ -1,6 +1,7 @@
 export interface NavigationItem {
   id: string;
   label: string;
+  href?: string;
 }
 
 export function visibleItems<T>(items: readonly T[], enabled: (item: T) => boolean): T[] {
