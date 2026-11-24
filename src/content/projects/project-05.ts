@@ -1,19 +1,43 @@
 import type { Project } from "../../types/project";
 
-// Development illustration. Replace with verified project content.
 export const project = {
-  id: "project-05",
-  title: "Project 05",
-  description: "Replace this draft with the purpose of your fifth web application.",
-  category: "Full Stack",
-  technologies: [],
+  id: "komorebi-notes",
+  title: "Komorebi Notes",
+  description:
+    "Offline-first personal notes application built with Flutter and BLoC/Cubit, featuring color-coded custom categories, rich note editing, filtering, lifecycle archiving, and local Hive storage.",
+  category: "Flutter App",
+  technologies: ["Flutter", "Dart", "BLoC / Cubit", "Hive"],
   screenshots: [
     {
-      src: "images/projects/project-05/preview-1.svg",
-      alt: "Illustrative wireframe for Project 05, view 1",
-      caption: "Overview",
+      src: "images/projects/komorebi/image1.png",
+      alt: "Komorebi Notes home overview",
+      caption: "Notes",
+    },
+    {
+      src: "images/projects/komorebi/image2.png",
+      alt: "Komorebi Notes custom categories view",
+      caption: "Categories",
+    },
+    {
+      src: "images/projects/komorebi/image3.png",
+      alt: "Komorebi Notes editor screen",
+      caption: "Note Editor",
+    },
+    {
+      src: "images/projects/komorebi/image4.png",
+      alt: "Komorebi Notes filtering and organization",
+      caption: "Organization",
+    },
+    {
+      src: "images/projects/komorebi/image5.png",
+      alt: "Komorebi Notes archive and trash lifecycle",
+      caption: "Archive",
+    },
+    {
+      src: "images/projects/komorebi/image6.png",
+      alt: "Komorebi Notes app preferences and settings",
+      caption: "Settings",
     },
   ],
   repositoryUrl: "",
-  draft: true,
 } satisfies Project;

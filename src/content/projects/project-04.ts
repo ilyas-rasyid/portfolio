@@ -1,24 +1,23 @@
 import type { Project } from "../../types/project";
 
-// Development illustration. Replace with verified project content.
 export const project = {
-  id: "project-04",
-  title: "Project 04",
-  description: "Replace this draft with the purpose of your fourth web application.",
+  id: "pvms",
+  title: "PVMS — Procurement & Vendor Management",
+  description:
+    "End-to-end procure-to-pay platform covering purchase requests, tiered managerial approvals, vendor RFQ sourcing, purchase order issuance, goods receipt verification, and 3-way invoice matching.",
   category: "Full Stack",
-  technologies: [],
+  technologies: ["React", "TypeScript", "Bun", "ElysiaJS", "Prisma", "PostgreSQL"],
   screenshots: [
     {
       src: "images/projects/pvms/image.png",
-      alt: "PVMS preview 1",
-      caption: "Overview",
+      alt: "PVMS procurement dashboard overview",
+      caption: "Dashboard",
     },
     {
       src: "images/projects/pvms/image2.png",
-      alt: "PVMS preview 2",
-      caption: "Dashboard",
+      alt: "PVMS purchase requests and vendor workflow",
+      caption: "Procurement Workflow",
     },
   ],
-  repositoryUrl: "",
-  draft: true,
+  repositoryUrl: "https://github.com/ilyas-rasyid/pvm",
 } satisfies Project;

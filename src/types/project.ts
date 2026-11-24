@@ -9,7 +9,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  category: "Full Stack" | "Frontend";
+  category: "Full Stack" | "Frontend" | "Flutter App";
   technologies: readonly string[];
   screenshots: readonly ProjectScreenshot[];
   repositoryUrl: string;
