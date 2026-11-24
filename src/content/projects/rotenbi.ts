@@ -29,7 +29,7 @@ export const project: Project = {
       caption: "Product Catalog",
     },
   ],
-  repositoryUrl: "https://github.com/ilyasrasyid12/fixrotenbi",
+  repositoryUrl: "",
   liveUrl: "https://rotenbi.com/",
   liveLabel: "Visit live site",
   status: "Completed",
