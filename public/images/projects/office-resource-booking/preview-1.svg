@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600">
+<rect width="960" height="600" fill="#fafbf8"/>
+<rect width="205" height="600" fill="#edf0ea"/>
+<text x="24" y="46" fill="#345b4c" font-family="Arial,sans-serif" font-size="18" font-weight="bold">Office Resource Book</text>
+<path d="M205 0v600" stroke="#d7ddd4"/>
+<rect x="24" y="90" width="12" height="12" rx="2" fill="#b6c3b5"/>
+<rect x="49" y="93" width="100" height="7" rx="3" fill="#c3cec1"/>
+<rect x="24" y="134" width="12" height="12" rx="2" fill="#b6c3b5"/>
+<rect x="49" y="137" width="95" height="7" rx="3" fill="#c3cec1"/>
+<rect x="24" y="178" width="12" height="12" rx="2" fill="#b6c3b5"/>
+<rect x="49" y="181" width="90" height="7" rx="3" fill="#c3cec1"/>
+<rect x="24" y="222" width="12" height="12" rx="2" fill="#b6c3b5"/>
+<rect x="49" y="225" width="85" height="7" rx="3" fill="#c3cec1"/>
+<rect x="24" y="266" width="12" height="12" rx="2" fill="#b6c3b5"/>
+<rect x="49" y="269" width="80" height="7" rx="3" fill="#c3cec1"/>
+<rect x="24" y="310" width="12" height="12" rx="2" fill="#b6c3b5"/>
+<rect x="49" y="313" width="75" height="7" rx="3" fill="#c3cec1"/>
+<text x="240" y="54" fill="#425b48" font-family="Arial,sans-serif" font-size="24">Overview</text>
+<text x="240" y="82" fill="#6f796f" font-family="Arial,sans-serif" font-size="13">ILLUSTRATIVE WIREFRAME / DEVELOPMENT ONLY</text>
+<rect x="240" y="112" width="210" height="94" rx="5" fill="#edf1eb" stroke="#d7e0d4"/>
+<rect x="472" y="112" width="210" height="94" rx="5" fill="#edf1eb" stroke="#d7e0d4"/>
+<rect x="704" y="112" width="210" height="94" rx="5" fill="#edf1eb" stroke="#d7e0d4"/>
+<path d="M240 240H914" stroke="#dce2d9"/>
+<rect x="251" y="255" width="85" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="416" y="255" width="102" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="581" y="255" width="119" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="746" y="255" width="85" height="7" rx="3" fill="#c5d0c3"/>
+<path d="M240 284H914" stroke="#dce2d9"/>
+<rect x="251" y="299" width="102" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="416" y="299" width="119" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="581" y="299" width="85" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="746" y="299" width="102" height="7" rx="3" fill="#c5d0c3"/>
+<path d="M240 328H914" stroke="#dce2d9"/>
+<rect x="251" y="343" width="119" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="416" y="343" width="85" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="581" y="343" width="102" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="746" y="343" width="119" height="7" rx="3" fill="#c5d0c3"/>
+<path d="M240 372H914" stroke="#dce2d9"/>
+<rect x="251" y="387" width="85" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="416" y="387" width="102" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="581" y="387" width="119" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="746" y="387" width="85" height="7" rx="3" fill="#c5d0c3"/>
+<path d="M240 416H914" stroke="#dce2d9"/>
+<rect x="251" y="431" width="102" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="416" y="431" width="119" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="581" y="431" width="85" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="746" y="431" width="102" height="7" rx="3" fill="#c5d0c3"/>
+<path d="M240 460H914" stroke="#dce2d9"/>
+<rect x="251" y="475" width="119" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="416" y="475" width="85" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="581" y="475" width="102" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="746" y="475" width="119" height="7" rx="3" fill="#c5d0c3"/>
+<path d="M240 504H914" stroke="#dce2d9"/>
+<rect x="251" y="519" width="85" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="416" y="519" width="102" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="581" y="519" width="119" height="7" rx="3" fill="#c5d0c3"/>
+<rect x="746" y="519" width="85" height="7" rx="3" fill="#c5d0c3"/>
+</svg>

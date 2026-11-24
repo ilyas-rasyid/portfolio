@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <title>Ilyas Rasyid — Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Personal portfolio of Ilyas Rasyid, Full Stack Developer."
+    />
+    <script>
+      (() => {
+        let preference = "system";
+        try {
+          preference = localStorage.getItem("portfolio-theme") || "system";
+        } catch {
+          // Storage may be disabled.
+        }
+        const systemDark = matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme =
+          preference === "light" || preference === "dark"
+            ? preference
+            : systemDark
+              ? "dark"
+              : "light";
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>This portfolio requires JavaScript to display project galleries.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+import { useMemo } from "react";
+import { Github } from "lucide-react";
+import { profile } from "@/content/profile";
+import { socialLinks } from "@/content/social-links";
+import { ThemeSwitcher } from "@/features/theme/components/theme-switcher";
+import { useActiveSection } from "@/hooks/use-active-section";
+import type { NavigationItem } from "@/lib/navigation";
+import { Container } from "./container";
+import { DesktopNavigation } from "./desktop-navigation";
+import { MobileNavigation } from "./mobile-navigation";
+
+export function Header({ items }: { items: readonly NavigationItem[] }) {
+  const ids = useMemo(() => items.map((item) => item.id), [items]);
+  const active = useActiveSection(ids);
+
+  return (
+    <header className="site-header">
+      <Container className="header-inner">
+        <a className="wordmark" href="#top" aria-label={`${profile.name}, home`}>
+          {profile.wordmark}
+        </a>
+        <DesktopNavigation items={items} active={active} />
+        <div className="header-actions">
+          <ThemeSwitcher />
+          {socialLinks.github && (
+            <a
+              className="icon-button header-github"
+              href={socialLinks.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
+            >
+              <Github size={19} />
+            </a>
+          )}
+          <MobileNavigation items={items} active={active} />
+        </div>
+      </Container>
+    </header>
+  );
+}

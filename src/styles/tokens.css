@@ -1,0 +1,45 @@
+:root {
+  color-scheme: light;
+  --canvas: #f8f8f5;
+  --canvas-rgb: 248, 248, 245;
+  --surface: #fff;
+  --foreground: #171717;
+  --muted: #60645e;
+  --accent: #345b4c;
+  --line: #d9ddd5;
+  --mat: #e6e9e1;
+  --frame: #f1f2ee;
+  --contact: #202b24;
+  --contact-text: #f1f1ee;
+  --contact-muted: #c2cfc4;
+  --font-sans: "Geist Variable", Arial, sans-serif;
+  --font-mono: "Geist Mono Variable", monospace;
+  --header-height: 72px;
+  --page-width: 1120px;
+  --gutter: 24px;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.3, 1);
+  --spring-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --fast: 180ms;
+  --normal: 200ms;
+  --slow: 350ms;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #121212;
+  --canvas-rgb: 18, 18, 18;
+  --surface: #1b1b1b;
+  --foreground: #f1f1ee;
+  --muted: #a3a3a3;
+  --accent: #9dbbaa;
+  --line: #353b35;
+  --mat: #272e29;
+  --frame: #222623;
+  --contact: #202b24;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 40px;
+  }
+}

@@ -1,0 +1,167 @@
+.button,
+.icon-button,
+.primary-link,
+.external-link,
+.inline-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.icon-button {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  background: transparent;
+  color: var(--foreground);
+  border: 0;
+  border-radius: 4px;
+}
+
+.icon-button:hover {
+  background: var(--mat);
+}
+
+.primary-link {
+  padding: 10px 19px;
+  background: var(--foreground);
+  color: var(--canvas);
+  font-size: 14px;
+  font-weight: 550;
+  border-radius: 6px;
+  transition: all var(--fast) var(--ease-out);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.primary-link:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.primary-link:active {
+  transform: translateY(0);
+}
+
+.link-arrow-down {
+  transition: transform var(--fast) var(--spring-ease);
+}
+
+.primary-link:hover .link-arrow-down {
+  transform: translate(2px, 2px);
+}
+
+.external-link,
+.inline-link {
+  font-size: 14px;
+  font-weight: 500;
+  transition: color var(--fast) var(--ease-out);
+}
+
+.external-link:hover,
+.inline-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.link-arrow {
+  transition: transform var(--fast) var(--ease-out);
+}
+
+.external-link:hover .link-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* Single-button theme switcher */
+.theme-switcher {
+  display: inline-flex;
+  align-items: center;
+}
+
+.theme-toggle-btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: var(--muted);
+  background: var(--mat);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: all var(--fast) var(--ease-out);
+}
+
+.theme-toggle-btn:hover {
+  color: var(--foreground);
+  background: var(--surface);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.theme-toggle-btn:active {
+  transform: translateY(0);
+}
+
+.theme-toggle-icon-wrap {
+  display: grid;
+  place-items: center;
+}
+
+.theme-toggle-icon {
+  transition: transform var(--slow) var(--spring-ease);
+}
+
+.theme-toggle-btn:hover .theme-toggle-icon.is-sun {
+  transform: rotate(45deg) scale(1.08);
+}
+
+.theme-toggle-btn:hover .theme-toggle-icon.is-moon {
+  transform: rotate(-15deg) scale(1.08);
+}
+
+/* Social icons above View My Work */
+.intro-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon-btn {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  color: var(--muted);
+  background: var(--mat);
+  border: 1px solid var(--line);
+  transition: all var(--fast) var(--spring-ease);
+}
+
+.social-icon-btn:hover {
+  color: var(--foreground);
+  background: var(--surface);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.social-icon-btn:active {
+  transform: translateY(0);
+}
+
+.image-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 160px;
+  width: 100%;
+  background: var(--mat);
+  color: var(--muted);
+  font-size: 13px;
+}

@@ -1,0 +1,150 @@
+.support-section {
+  padding-block: 44px;
+}
+
+.support-section > .container-shell {
+  border-top: 1px solid var(--line);
+  padding-top: 36px;
+}
+
+.split-section {
+  display: grid;
+  gap: 16px;
+}
+
+.about-copy {
+  display: grid;
+  gap: 18px;
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.skill-list {
+  margin: 0;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+  padding-block: 16px;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.skill-row:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.skill-row dt {
+  font-weight: 550;
+}
+
+.skill-row dd {
+  margin: 0;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.experience-item {
+  display: grid;
+  gap: 12px;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-item h3 {
+  font-size: 24px;
+}
+
+.experience-description {
+  color: var(--muted);
+}
+
+.contact-section {
+  margin-top: 36px;
+  background: var(--contact);
+  color: var(--contact-text);
+  padding-block: 56px;
+}
+
+.contact-inner {
+  display: grid;
+  gap: 36px;
+}
+
+.contact-inner .eyebrow {
+  color: var(--contact-muted);
+  margin-bottom: 12px;
+}
+
+.contact-inner h2 + p {
+  margin-top: 16px;
+  color: var(--contact-muted);
+}
+
+.contact-links {
+  display: grid;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+  min-height: 48px;
+  border-bottom: 1px solid #506256;
+  overflow-wrap: anywhere;
+}
+
+.contact-link .link-arrow {
+  margin-left: auto;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-link svg {
+  flex-shrink: 0;
+}
+
+.contact-link:focus-visible,
+.contact-section button:focus-visible {
+  outline-color: #9dbbaa;
+}
+
+.copy-email {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.copy-button {
+  color: var(--contact-muted);
+  background: transparent;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .split-section,
+  .contact-inner {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: 48px;
+  }
+  .experience-item {
+    grid-template-columns: 1fr auto;
+  }
+  .experience-description {
+    grid-column: 1 / -1;
+  }
+  .support-section {
+    padding-block: 48px;
+  }
+  .contact-section {
+    padding-block: 72px;
+  }
+}
