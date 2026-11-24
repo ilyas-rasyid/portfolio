@@ -77,14 +77,15 @@ test("E2E-010 no overflow at required widths", async ({ page }) => {
   }
 });
 test("E2E-011 résumé availability", async ({ page }) => {
+  const resumeLinks = page.locator('a[download][href$=".pdf"]');
   if (profile.resume) {
-    const link = page.locator("a[download]").first();
+    const link = resumeLinks.first();
     await expect(link).toBeVisible();
     const download = page.waitForEvent("download");
     await link.click();
     expect((await download).suggestedFilename()).toMatch(/\.pdf$/);
   } else {
-    await expect(page.locator("a[download]")).toHaveCount(0);
+    await expect(resumeLinks).toHaveCount(0);
   }
 });
 test("E2E-012 repository destinations", async ({ page }) => {

@@ -40,4 +40,7 @@ export const project = {
     },
   ],
   repositoryUrl: "",
+  downloadUrl: "apk/komorebi.apk",
+  downloadLabel: "Download APK (Android)",
+  downloadFilename: "komorebi.apk",
 } satisfies Project;

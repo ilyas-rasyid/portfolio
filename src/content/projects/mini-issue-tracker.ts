@@ -5,7 +5,7 @@ export const project = {
   title: "Mini Issue Tracker",
   description:
     "Developer-focused issue and bug tracker for managing multi-project workflows, tracking issue priority and progress status, recording audit activity history, and storing attachments via S3 object storage.",
-  category: "Full Stack",
+  category: "Web Application",
   technologies: ["React", "TypeScript", "Bun", "ElysiaJS", "Prisma", "PostgreSQL", "S3"],
   screenshots: [
     {

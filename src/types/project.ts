@@ -10,16 +10,20 @@ export interface Project {
   title: string;
   description: string;
   category:
-    | "Full Stack"
-    | "Frontend"
+    | "Website"
+    | "Web Application"
     | "Flutter App"
     | "AI / Computer Vision"
-    | "Web Application";
+    | "Full Stack"
+    | "Frontend";
   technologies: readonly string[];
   screenshots: readonly ProjectScreenshot[];
   repositoryUrl: string;
   liveUrl?: string;
   liveLabel?: string;
+  downloadUrl?: string;
+  downloadLabel?: string;
+  downloadFilename?: string;
   status?: "In development" | "Completed";
   year?: number;
   draft?: boolean;

@@ -5,7 +5,7 @@ export const project = {
   title: "ORBS — Office Resource Booking System",
   description:
     "Centralized office asset reservation platform for meeting rooms, operational vehicles, and equipment, with PostgreSQL exclusion-constraint conflict protection, approval workflows, handover tracking, and maintenance scheduling.",
-  category: "Full Stack",
+  category: "Web Application",
   technologies: ["React", "TypeScript", "Bun", "ElysiaJS", "Prisma", "PostgreSQL"],
   screenshots: [
     {

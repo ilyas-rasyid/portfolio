@@ -5,7 +5,7 @@ export const project = {
   title: "PeopleOps HRIS",
   description:
     "Human Resource Information System for employee directory management, server-based daily attendance, annual and unpaid leave requests, managerial approvals, and employment audit history.",
-  category: "Full Stack",
+  category: "Web Application",
   technologies: ["React", "TypeScript", "Bun", "ElysiaJS", "Prisma", "PostgreSQL"],
   screenshots: [
     {

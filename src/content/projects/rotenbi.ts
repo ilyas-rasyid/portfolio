@@ -5,7 +5,7 @@ export const project: Project = {
   title: "Rotenbi — Sustainable Woven Craft",
   description:
     "Bilingual (ID/EN) MSME company profile and product catalog website for Rotenbi, showcasing sustainable woven bags, local artisan stories, weaving patterns, and direct WhatsApp ordering.",
-  category: "Web Application",
+  category: "Website",
   technologies: ["PHP", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
   screenshots: [
     {

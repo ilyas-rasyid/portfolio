@@ -15,8 +15,8 @@
   --accent: #2f4a37;
   --accent-ink: #ffffff;
   --line: #e2e6e3;
-  --scrollbar-thumb: rgba(90, 99, 93, 0.28);
-  --scrollbar-thumb-hover: rgba(90, 99, 93, 0.48);
+  --scrollbar-thumb: #2f4a37;
+  --scrollbar-thumb-hover: #243b2b;
   --font-sans:
     "Geist Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --radius-sm: 8px;
@@ -49,8 +49,8 @@
   --accent: #f5a61c;
   --accent-ink: #161b17;
   --line: #27322a;
-  --scrollbar-thumb: rgba(161, 172, 164, 0.28);
-  --scrollbar-thumb-hover: rgba(161, 172, 164, 0.48);
+  --scrollbar-thumb: #3b6147;
+  --scrollbar-thumb-hover: #4d7d5c;
 }
 
 @media (min-width: 768px) {

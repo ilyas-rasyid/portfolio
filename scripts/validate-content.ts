@@ -31,6 +31,7 @@ for (const project of projects) {
   }
   if ((publish || project.repositoryUrl) && !isRepositoryUrl(project.repositoryUrl))
     errors.push(`${project.id}: valid GitHub repository URL required`);
+  if (project.downloadUrl) checkAsset(project.downloadUrl, project.id);
   if (publish && (project.draft || !project.technologies.length))
     errors.push(`${project.id}: confirm project content and remove draft flag`);
 }

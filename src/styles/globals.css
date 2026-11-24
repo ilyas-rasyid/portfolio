@@ -14,7 +14,7 @@ html {
   scroll-padding-top: calc(var(--header-height) + 24px);
   background: var(--canvas);
   scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) transparent;
+  scrollbar-color: var(--scrollbar-thumb) var(--canvas);
 }
 
 body {
@@ -36,8 +36,8 @@ body {
 }
 
 *::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 *::-webkit-scrollbar-track {

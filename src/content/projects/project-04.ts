@@ -5,7 +5,7 @@ export const project = {
   title: "PVMS — Procurement & Vendor Management",
   description:
     "End-to-end procure-to-pay platform covering purchase requests, tiered managerial approvals, vendor RFQ sourcing, purchase order issuance, goods receipt verification, and 3-way invoice matching.",
-  category: "Full Stack",
+  category: "Web Application",
   technologies: ["React", "TypeScript", "Bun", "ElysiaJS", "Prisma", "PostgreSQL"],
   screenshots: [
     {
