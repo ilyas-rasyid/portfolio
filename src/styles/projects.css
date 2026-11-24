@@ -63,8 +63,21 @@
   color: var(--muted);
 }
 
-.repository-link {
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 20px;
   margin-top: 6px;
+}
+
+.project-links:empty {
+  display: none;
+}
+
+.live-project-link,
+.repository-link {
+  margin-top: 0;
 }
 
 /* Flat tonal media stage — separated by tone alone, zero border, zero shadow */
