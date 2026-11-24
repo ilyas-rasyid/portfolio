@@ -1,5 +1,4 @@
 import { useLayoutEffect, useState, type PropsWithChildren } from "react";
-import { useMediaQuery } from "@/hooks/use-media-query";
 import { readStorage, writeStorage } from "@/lib/storage";
 import { ThemeContext } from "./theme-context";
 import { parseTheme, THEME_KEY } from "./theme-preference";
@@ -9,13 +8,12 @@ export function ThemeProvider({ children }: PropsWithChildren) {
   const [preference, setPreference] = useState<ThemePreference>(() =>
     parseTheme(readStorage(THEME_KEY)),
   );
-  const systemDark = useMediaQuery("(prefers-color-scheme: dark)");
-  const resolved = preference === "system" ? (systemDark ? "dark" : "light") : preference;
+  const resolved = preference === "dark" ? "dark" : "light";
 
   useLayoutEffect(() => {
     document.documentElement.dataset.theme = resolved;
-    writeStorage(THEME_KEY, preference);
-  }, [preference, resolved]);
+    writeStorage(THEME_KEY, resolved);
+  }, [resolved]);
 
   return (
     <ThemeContext.Provider value={{ preference, resolved, setPreference }}>

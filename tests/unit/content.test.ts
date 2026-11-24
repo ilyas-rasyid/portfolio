@@ -13,12 +13,8 @@ describe("Portfolio utilities", () => {
       "/portfolio/images/a.webp",
     ));
   it("UT-003 valid theme preference", () =>
-    expect(["light", "dark", "system"].map(parseTheme)).toEqual([
-      "light",
-      "dark",
-      "system",
-    ]));
-  it("UT-004 invalid storage value", () => expect(parseTheme("invalid")).toBe("system"));
+    expect(["light", "dark"].map(parseTheme)).toEqual(["light", "dark"]));
+  it("UT-004 invalid storage value", () => expect(parseTheme("invalid")).toBe("light"));
   it("UT-005 gallery next wraps", () => expect(moveIndex(2, 1, 3)).toBe(0));
   it("UT-006 gallery previous wraps", () => expect(moveIndex(0, -1, 3)).toBe(2));
   it("UT-007 project IDs unique", () => expect(hasUniqueIds(projects)).toBe(true));

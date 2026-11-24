@@ -11,19 +11,13 @@
     />
     <script>
       (() => {
-        let preference = "system";
+        let preference = "light";
         try {
-          preference = localStorage.getItem("portfolio-theme") || "system";
+          preference = localStorage.getItem("portfolio-theme") || "light";
         } catch {
           // Storage may be disabled.
         }
-        const systemDark = matchMedia("(prefers-color-scheme: dark)").matches;
-        document.documentElement.dataset.theme =
-          preference === "light" || preference === "dark"
-            ? preference
-            : systemDark
-              ? "dark"
-              : "light";
+        document.documentElement.dataset.theme = preference === "dark" ? "dark" : "light";
       })();
     </script>
   </head>
