@@ -1,4 +1,4 @@
-import { ArrowDownRight, FileDown, Github, Instagram, Linkedin } from "lucide-react";
+import { FileDown, Github, Instagram, Linkedin, Play } from "lucide-react";
 import { profile } from "@/content/profile";
 import { socialLinks } from "@/content/social-links";
 import { assetUrl } from "@/lib/asset-url";
@@ -46,12 +46,18 @@ export function IntroductionActions() {
       </div>
 
       <div className="intro-actions">
-        <a className="primary-link" href="#work">
-          View my work <ArrowDownRight size={17} aria-hidden="true" />
+        <a className="split-cta" href="#work">
+          <span className="split-cta-label">View My Portfolio</span>
+          <span className="split-cta-circle" aria-hidden="true">
+            <Play size={13} fill="currentColor" />
+          </span>
+        </a>
+        <a className="outline-pill-btn" href="#about">
+          About Me
         </a>
         {profile.resume && (
-          <a className="inline-link" href={assetUrl(profile.resume)} download>
-            <FileDown size={17} aria-hidden="true" /> Résumé
+          <a className="outline-pill-btn" href={assetUrl(profile.resume)} download>
+            <FileDown size={16} aria-hidden="true" /> Résumé
           </a>
         )}
       </div>

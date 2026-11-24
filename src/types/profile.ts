@@ -5,6 +5,7 @@ export interface Profile {
   introduction: string;
   location?: string;
   portrait?: { src: string; alt: string };
+  aboutPortrait?: { src: string; alt: string };
   available: boolean;
   resume?: string;
 }

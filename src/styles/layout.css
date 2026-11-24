@@ -3,27 +3,52 @@
   margin-inline: auto;
 }
 
-/* Solid opaque header — no backdrop blur */
+/* Signature Dark Forest-Green Pill Navbar matching reference */
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 30;
   background: var(--canvas);
+  padding-block: 14px;
   transition: background-color var(--t-ui) ease;
 }
 
-.header-inner {
-  height: var(--header-height);
+.header-pill {
+  height: 56px;
+  padding: 0 10px 0 12px;
+  border-radius: 999px;
+  background: var(--forest);
+  color: var(--forest-ink);
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .wordmark {
-  font-size: 20px;
-  letter-spacing: -0.045em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  letter-spacing: -0.025em;
   font-weight: 700;
+  color: var(--forest-ink);
   margin-right: auto;
+}
+
+.wordmark-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: var(--amber-ink);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.wordmark-dot {
+  color: var(--amber);
 }
 
 .desktop-navigation {
@@ -42,6 +67,19 @@
   display: none !important;
 }
 
+.site-header .icon-button,
+.site-header .theme-toggle-btn {
+  color: var(--forest-ink);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .site-header .icon-button:hover,
+  .site-header .theme-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--amber);
+  }
+}
+
 .nav-link {
   position: relative;
   display: inline-flex;
@@ -49,36 +87,37 @@
   min-height: 44px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--muted);
+  color: var(--forest-muted);
   transition: color var(--t-hover) ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .nav-link:hover {
-    color: var(--foreground);
+    color: var(--forest-ink);
   }
 }
 
 .nav-link[aria-current] {
-  color: var(--foreground);
+  color: var(--amber);
 }
 
 .nav-link[aria-current]::after {
   content: "";
   position: absolute;
   height: 2px;
-  bottom: 8px;
+  bottom: 9px;
   left: 0;
   right: 0;
-  background: var(--accent);
+  background: var(--amber);
 }
 
 .mobile-menu {
   position: absolute;
-  inset: 100% 0 auto;
-  background: var(--canvas);
-  padding: 12px var(--gutter) 20px;
-  border-bottom: 1px solid var(--line);
+  inset: 100% var(--gutter) auto;
+  background: var(--forest);
+  color: var(--forest-ink);
+  border-radius: var(--radius-md);
+  padding: 10px 18px 16px;
   animation: menu-enter var(--t-ui) var(--ease-out);
 }
 
@@ -96,113 +135,274 @@
   transform: translateY(-150%);
   padding: 10px 14px;
   border-radius: var(--radius-sm);
-  background: var(--surface);
-  color: var(--foreground);
+  background: var(--forest);
+  color: var(--forest-ink);
 }
 
 .skip-link:focus {
   transform: none;
 }
 
-/* Asymmetric Hero Stage — flat tonal surface, zero border, zero gradient, zero shadow */
+/* Hero Section matching exact reference layout */
 .intro-section {
-  padding-block: 16px 24px;
-}
-
-.hero-stage {
-  position: relative;
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-  overflow: clip;
-  padding: 28px 24px 0;
+  padding-top: 24px;
+  overflow-x: clip;
 }
 
 .intro-grid {
   display: grid;
-  gap: 28px;
-  align-items: end;
+  gap: 36px;
+  align-items: center;
 }
 
 .hero-body {
-  padding-bottom: 28px;
   min-width: 0;
+  padding-bottom: 12px;
 }
 
-.intro-role {
-  margin-top: 12px;
-  font-size: 16px;
-  font-weight: 550;
+/* Iconic "Hello There!" box with 4 amber corner handles */
+.hello-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
   color: var(--foreground);
+  border: 1px solid var(--line);
+}
+
+.hello-corner {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--amber);
+}
+
+.hello-corner.tl {
+  top: -3px;
+  left: -3px;
+}
+
+.hello-corner.tr {
+  top: -3px;
+  right: -3px;
+}
+
+.hello-corner.bl {
+  bottom: -3px;
+  left: -3px;
+}
+
+.hello-corner.br {
+  bottom: -3px;
+  right: -3px;
+}
+
+.hero-name-accent {
+  color: var(--amber);
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-thickness: 2.5px;
+  text-underline-offset: 6px;
 }
 
 .intro-description {
-  margin-top: 12px;
+  margin-top: 20px;
   max-width: 48ch;
-  font-size: clamp(15px, 1.6vw, 18px);
+  font-size: 15px;
   color: var(--muted);
 }
 
 .intro-actions-container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 24px;
+  gap: 14px;
+  margin-top: 22px;
 }
 
 .intro-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
-/* Cutout portrait anchored cleanly to bottom edge — no glow or drop-shadow */
-.portrait {
+/* Hero Portrait Composition — Organic Amber Shape + Cutout Portrait + Floating Tags */
+.hero-visual {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  justify-self: center;
+  min-height: 360px;
+  padding-top: 24px;
+}
+
+.hero-amber-shape {
+  position: absolute;
+  bottom: 0;
+  width: min(84%, 340px);
+  height: 290px;
+  background: var(--amber);
+  border-radius: 54% 46% 42% 58% / 56% 52% 48% 44%;
+  z-index: 0;
+}
+
+.portrait {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   width: 100%;
-  max-width: 260px;
+  max-width: 280px;
 }
 
 .portrait img {
   width: auto;
   max-width: 100%;
-  max-height: 350px;
+  max-height: 390px;
   height: auto;
-  display: block;
   object-fit: contain;
 }
 
-/* Open editorial tech list below Hero Stage */
-.stack-strip {
+.hero-stamp {
+  position: absolute;
+  top: 24px;
+  right: 4px;
+  z-index: 2;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: var(--forest);
+  display: grid;
+  place-items: center;
+}
+
+.hero-stamp-svg {
+  width: 74px;
+  height: 74px;
+}
+
+.hero-stamp-text {
+  fill: var(--forest-ink);
+  font-size: 9.2px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.hero-stamp-core {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+
+.hero-tag {
+  position: absolute;
+  z-index: 2;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.hero-tag-green {
+  left: 0;
+  bottom: 24px;
+  background: var(--forest);
+  color: var(--forest-ink);
+}
+
+.hero-tag-amber {
+  right: 0;
+  bottom: 84px;
+  background: var(--amber);
+  color: var(--amber-ink);
+}
+
+/* Signature Tilted Amber Ribbon over Forest-Green Backing */
+.ribbon-wrap {
+  position: relative;
+  margin-top: 8px;
+  padding-block: 14px;
+  overflow: clip;
+}
+
+.ribbon-back {
+  position: absolute;
+  inset: 14px -4% auto;
+  height: 52px;
+  background: var(--forest);
+  transform: rotate(1.4deg);
+}
+
+.ribbon-front {
+  position: relative;
+  z-index: 1;
+  background: var(--amber);
+  color: var(--amber-ink);
+  padding-block: 15px;
+  margin-inline: -2%;
+  transform: rotate(-1deg);
+}
+
+.ribbon-track {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px 28px;
-  list-style: none;
-  margin: 0;
-  padding: 20px 4px 4px;
+  justify-content: center;
+  gap: 10px 26px;
+  padding-inline: 24px;
 }
 
-.stack-strip li {
+.ribbon-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ribbon-star {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Section kicker with signature short amber dash */
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--muted);
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 8px;
 }
 
-.section-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 28px;
+.section-kicker-light {
+  color: var(--forest-ink);
+}
+
+.section-kicker-center {
+  justify-content: center;
+}
+
+.kicker-dash {
+  width: 14px;
+  height: 2px;
+  background: var(--amber);
 }
 
 /* Minimal open footer with horizontally centered copyright */
 .site-footer {
-  padding-block: 32px;
+  border-top: 1px solid var(--line);
+  padding-block: 30px;
+  margin-top: 24px;
 }
 
 .footer-inner {
@@ -218,17 +418,18 @@
   text-align: center;
 }
 
-@media (max-width: 374px) {
-  .header-inner {
-    gap: 8px;
+@media (max-width: 480px) {
+  .hero-tag {
+    display: none;
   }
-  .hero-stage {
-    padding: 24px 18px 0;
+  .hero-stamp {
+    width: 68px;
+    height: 68px;
+    top: 12px;
   }
-  .section-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 4px;
+  .hero-stamp-svg {
+    width: 62px;
+    height: 62px;
   }
 }
 
@@ -243,28 +444,34 @@
     display: inline-flex !important;
   }
   .intro-section {
-    padding-block: 20px 32px;
-  }
-  .hero-stage {
-    padding: 48px 48px 0;
+    padding-top: 32px;
   }
   .intro-grid {
-    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-    gap: 40px;
+    grid-template-columns: minmax(0, 6.5fr) minmax(0, 5.5fr);
+    gap: 44px;
   }
   .hero-body {
-    padding-bottom: 48px;
+    padding-bottom: 40px;
   }
-  .intro-no-portrait {
-    grid-template-columns: minmax(0, 1fr);
+  .hero-visual {
+    min-height: 430px;
   }
-  .intro-no-portrait h1 {
-    max-width: 760px;
+  .hero-amber-shape {
+    width: 360px;
+    height: 315px;
   }
   .portrait {
-    max-width: 320px;
+    max-width: 310px;
   }
   .portrait img {
-    max-height: 410px;
+    max-height: 420px;
+  }
+  .hero-tag-green {
+    left: 6px;
+    bottom: 28px;
+  }
+  .hero-tag-amber {
+    right: -6px;
+    bottom: 108px;
   }
 }

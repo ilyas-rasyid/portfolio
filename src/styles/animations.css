@@ -1,26 +1,32 @@
-/* Signature motion: single masked headline reveal on initial load */
 .hero-title-mask {
   display: block;
   overflow: clip;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
+  padding-bottom: 0.1em;
+  margin-bottom: -0.1em;
 }
 
 .hero-title-line {
   display: block;
-  animation: hero-line-rise 720ms var(--ease-expo) both;
+  animation: hero-line-rise 680ms var(--ease-expo) both;
+}
+
+.hero-title-line-2 {
+  animation-delay: 80ms;
+}
+
+.hero-title-line-3 {
+  animation-delay: 160ms;
 }
 
 @keyframes hero-line-rise {
   from {
-    transform: translateY(105%);
+    transform: translateY(108%);
   }
   to {
     transform: none;
   }
 }
 
-/* Purposeful state-change animations only */
 @keyframes gallery-enter {
   from {
     opacity: 0.45;

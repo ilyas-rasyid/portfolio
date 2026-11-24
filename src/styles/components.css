@@ -18,7 +18,9 @@
   color: var(--foreground);
   border: 0;
   border-radius: var(--radius-sm);
-  transition: background-color var(--t-hover) ease;
+  transition:
+    background-color var(--t-hover) ease,
+    color var(--t-hover) ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -27,33 +29,99 @@
   }
 }
 
-/* Flat solid primary CTA — zero gradient, zero glow, standard radius */
-.primary-link {
-  padding: 0 20px;
-  background: var(--accent);
-  color: var(--accent-ink);
+/* Signature Split Pill CTA (Forest Green body + Warm Amber circular icon badge) */
+.split-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 4px 4px 20px;
+  min-height: 46px;
+  border-radius: 999px;
+  background: var(--forest);
+  color: var(--forest-ink);
   font-size: 14px;
   font-weight: 600;
-  border-radius: var(--radius-md);
   transition:
     background-color var(--t-hover) ease,
     transform var(--t-press) var(--ease-out);
 }
 
+.split-cta-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: var(--amber-ink);
+  display: grid;
+  place-items: center;
+  transition: transform var(--t-hover) var(--ease-out);
+}
+
 @media (hover: hover) and (pointer: fine) {
-  .primary-link:hover {
-    background: var(--accent-hover);
+  .split-cta:hover {
+    background: var(--forest-hover);
+  }
+  .split-cta:hover .split-cta-circle {
+    transform: translateX(2px);
   }
 }
 
-.primary-link:active {
+.split-cta:active {
+  transform: scale(0.98);
+}
+
+/* Variant used on dark Forest-Green About band */
+.split-cta-on-dark {
+  background: var(--amber);
+  color: var(--amber-ink);
+}
+
+.split-cta-on-dark .split-cta-circle {
+  background: var(--forest);
+  color: var(--forest-ink);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .split-cta-on-dark:hover {
+    background: var(--amber-hover);
+  }
+}
+
+/* Secondary Outline Pill CTA matching reference ("Hire Me" / "About Me") */
+.outline-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1.5px solid var(--foreground);
+  color: var(--foreground);
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background-color var(--t-hover) ease,
+    color var(--t-hover) ease,
+    transform var(--t-press) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .outline-pill-btn:hover {
+    background: var(--foreground);
+    color: var(--canvas);
+  }
+}
+
+.outline-pill-btn:active {
   transform: scale(0.98);
 }
 
 .external-link,
 .inline-link {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 550;
   color: var(--foreground);
   text-decoration: underline;
   text-decoration-color: transparent;
@@ -66,6 +134,7 @@
 @media (hover: hover) and (pointer: fine) {
   .external-link:hover,
   .inline-link:hover {
+    color: var(--amber-hover);
     text-decoration-color: currentColor;
   }
 }
@@ -80,7 +149,7 @@
   }
 }
 
-/* Single plain icon theme toggle — zero box background or border */
+/* Single plain icon theme switcher — zero box background */
 .theme-switcher {
   display: inline-flex;
   align-items: center;
@@ -98,13 +167,8 @@
   border-radius: var(--radius-sm);
   transition:
     background-color var(--t-hover) ease,
+    color var(--t-hover) ease,
     transform var(--t-press) var(--ease-out);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .theme-toggle-btn:hover {
-    background: var(--surface);
-  }
 }
 
 .theme-toggle-btn:active {
@@ -120,7 +184,7 @@
   transition: transform var(--t-ui) var(--ease-out);
 }
 
-/* Plain icon social links directly above View my work */
+/* Clean borderless social links above primary CTA */
 .intro-socials {
   display: flex;
   align-items: center;
@@ -145,7 +209,7 @@
 @media (hover: hover) and (pointer: fine) {
   .social-icon-btn:hover {
     color: var(--foreground);
-    background: var(--surface-strong);
+    background: var(--surface);
   }
 }
 

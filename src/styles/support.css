@@ -1,70 +1,303 @@
-.support-section {
-  padding-block: 52px;
+/* 1. Services I Provide Section — Exact Reference 3-Card Row */
+.services-section {
+  padding-block: 64px;
 }
 
-.split-section {
+.services-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.services-grid {
   display: grid;
   gap: 20px;
-  align-items: start;
 }
 
-.split-section .section-heading {
-  margin-bottom: 0;
-}
-
-.about-copy {
-  display: grid;
-  gap: 16px;
-  font-size: 16px;
-  color: var(--muted);
-  max-width: 62ch;
-}
-
-.about-lead {
-  font-size: clamp(19px, 2.2vw, 23px);
-  line-height: 1.48;
-  font-weight: 500;
-  color: var(--foreground);
-  letter-spacing: -0.02em;
-}
-
-/* Open editorial Technical Expertise — zero bento cards, zero pill badges */
-.skills-intro {
-  display: grid;
-  gap: 10px;
-}
-
-.skills-subtitle {
-  font-size: 15px;
-  color: var(--muted);
-  max-width: 34ch;
-}
-
-.skill-list {
-  display: grid;
-  gap: 8px;
-  margin: 0;
-}
-
-.skill-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 4px;
-  padding: 16px 20px;
-  border-radius: var(--radius-md);
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px 24px;
+  border-radius: var(--radius-lg);
   background: var(--surface);
-  font-size: 15px;
+  transition: background-color var(--t-hover) ease;
 }
 
-.skill-row dt {
+@media (hover: hover) and (pointer: fine) {
+  .service-card:hover {
+    background: var(--surface-strong);
+  }
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--canvas);
+  color: var(--forest);
+  display: grid;
+  place-items: center;
+  margin-bottom: 6px;
+}
+
+:root[data-theme="dark"] .service-icon {
+  color: var(--amber);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  color: var(--foreground);
+}
+
+.service-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.service-link {
+  margin-top: auto;
+  padding-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--foreground);
 }
 
-.skill-row dd {
-  margin: 0;
+.service-link svg {
+  color: var(--amber);
+  transition: transform var(--t-hover) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .service-link:hover svg {
+    transform: translateX(3px);
+  }
+}
+
+/* 2. Dark Forest-Green About Me Band — Exact Reference Section */
+.about-band {
+  background: var(--forest);
+  color: var(--forest-ink);
+  padding-block: 68px;
+}
+
+.about-grid {
+  display: grid;
+  gap: 44px;
+  align-items: center;
+}
+
+.about-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-circle {
+  width: min(76vw, 310px);
+  height: min(76vw, 310px);
+  border-radius: 50%;
+  background: var(--amber);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.about-portrait-img {
+  width: auto;
+  height: 94%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.about-tag-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 340px;
+  margin-top: -22px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.about-chip-amber {
+  background: var(--amber);
+  color: var(--amber-ink);
+}
+
+.about-chip-green {
+  background: #1d3123;
+  color: var(--forest-ink);
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.about-copy {
+  display: grid;
+  gap: 12px;
+  color: var(--forest-muted);
+  font-size: 15px;
+  max-width: 54ch;
+}
+
+.about-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 480px;
+  padding-block: 8px;
+}
+
+.about-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.about-metric strong {
+  font-size: clamp(22px, 2.8vw, 30px);
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: var(--amber);
+}
+
+.about-metric span {
+  font-size: 13px;
+  color: var(--forest-muted);
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: 6px;
+}
+
+.about-signature {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--amber);
+}
+
+/* 3. Exploring the Tools & Tech Stack Behind My Builds — Exact Oval Capsules */
+.tools-section {
+  padding-block: 72px 48px;
+}
+
+.tools-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.tools-group + .tools-group {
+  margin-top: 40px;
+}
+
+.tools-group-title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--muted);
-  overflow-wrap: anywhere;
+  margin-bottom: 22px;
+}
+
+.tools-capsules {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tool-capsule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tool-capsule-body {
+  width: 100%;
+  max-width: 144px;
+  min-height: 158px;
+  padding: 18px 12px 20px;
+  border-radius: 999px;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  transition: background-color var(--t-hover) ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tool-capsule:hover .tool-capsule-body {
+    background: var(--surface-strong);
+  }
+}
+
+.tool-capsule-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--canvas);
+  color: var(--forest);
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+:root[data-theme="dark"] .tool-capsule-icon {
+  color: var(--amber);
+}
+
+.tool-capsule-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-align: center;
+}
+
+.tool-capsule-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--foreground);
+  text-align: center;
+}
+
+/* Optional Experience section */
+.support-section {
+  padding-block: 52px;
 }
 
 .experience-item {
@@ -73,105 +306,49 @@
   padding-block: 20px;
 }
 
-.experience-item h3 {
-  font-size: 24px;
-}
-
 .experience-description {
   color: var(--muted);
 }
 
-/* Inverted chapter field for Contact — full-bleed solid tone, zero glow, zero border */
-.contact-section {
-  margin-top: 40px;
-  background: var(--invert-bg);
-  color: var(--invert-ink);
-  padding-block: 60px;
-}
-
-.contact-inner {
-  display: grid;
-  gap: 32px;
-  align-items: start;
-}
-
-.contact-copy h2 + p {
-  margin-top: 12px;
-  color: var(--invert-muted);
-  max-width: 40ch;
-}
-
-.contact-links {
-  display: grid;
-  gap: 4px;
-}
-
-.contact-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  justify-content: flex-start;
-  min-height: 48px;
-  padding-inline: 14px;
-  border-radius: var(--radius-sm);
-  overflow-wrap: anywhere;
-  color: var(--invert-ink);
-  transition: background-color var(--t-hover) ease;
-}
-
-.contact-link .link-arrow {
-  margin-left: auto;
-  color: var(--invert-muted);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .contact-link:hover {
-    background: var(--invert-hover);
-    text-decoration: none;
+@media (min-width: 640px) {
+  .tools-capsules {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-}
-
-.contact-link svg {
-  flex-shrink: 0;
-}
-
-.copy-email {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  padding-inline: 14px;
-  font-size: 13px;
-}
-
-.copy-button {
-  color: var(--invert-muted);
-  background: transparent;
-  border: 0;
 }
 
 @media (min-width: 768px) {
-  .support-section {
-    padding-block: 68px;
+  .services-section {
+    padding-block: 80px;
   }
-  .split-section,
-  .contact-inner {
-    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
-    gap: 52px;
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
   }
-  .skill-row {
-    grid-template-columns: minmax(0, 180px) minmax(0, 1fr);
-    gap: 20px;
-    align-items: baseline;
+  .about-band {
+    padding-block: 84px;
+  }
+  .about-grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 56px;
+  }
+  .about-circle {
+    width: 340px;
+    height: 340px;
+  }
+  .tools-section {
+    padding-block: 84px 52px;
+  }
+  .tools-capsules {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+  .tools-capsules-compact {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
   .experience-item {
     grid-template-columns: 1fr auto;
   }
   .experience-description {
     grid-column: 1 / -1;
-  }
-  .contact-section {
-    margin-top: 56px;
-    padding-block: 72px;
   }
 }

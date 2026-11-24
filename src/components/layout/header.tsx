@@ -15,25 +15,33 @@ export function Header({ items }: { items: readonly NavigationItem[] }) {
 
   return (
     <header className="site-header">
-      <Container className="header-inner">
-        <a className="wordmark" href="#top" aria-label={`${profile.name}, home`}>
-          {profile.wordmark}
-        </a>
-        <DesktopNavigation items={items} active={active} />
-        <div className="header-actions">
-          <ThemeSwitcher />
-          {socialLinks.github && (
-            <a
-              className="icon-button header-github"
-              href={socialLinks.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub profile"
-            >
-              <Github size={19} />
-            </a>
-          )}
-          <MobileNavigation items={items} active={active} />
+      <Container>
+        <div className="header-pill">
+          <a className="wordmark" href="#top" aria-label={`${profile.name}, home`}>
+            <span className="wordmark-badge" aria-hidden="true">
+              I
+            </span>
+            <span>
+              {profile.wordmark}
+              <span className="wordmark-dot">.</span>
+            </span>
+          </a>
+          <DesktopNavigation items={items} active={active} />
+          <div className="header-actions">
+            <ThemeSwitcher />
+            {socialLinks.github && (
+              <a
+                className="icon-button header-github"
+                href={socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile"
+              >
+                <Github size={19} />
+              </a>
+            )}
+            <MobileNavigation items={items} active={active} />
+          </div>
         </div>
       </Container>
     </header>

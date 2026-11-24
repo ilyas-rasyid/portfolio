@@ -1,8 +1,16 @@
 .work-section {
-  padding-block: 56px 40px;
+  padding-block: 64px 48px;
 }
 
-/* Open editorial project list — zero nested cards, zero shadows */
+.work-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
 .project-list {
   display: flex;
   flex-direction: column;
@@ -33,21 +41,21 @@
 
 .project-category {
   font-size: 13px;
-  font-weight: 500;
-  color: var(--muted);
+  font-weight: 600;
+  color: var(--amber);
 }
 
 .project-summary {
   color: var(--muted);
   font-size: 15px;
-  max-width: 42ch;
+  max-width: 44ch;
 }
 
 .project-technologies {
   margin-top: 4px;
   font-size: 14px;
+  font-weight: 500;
   color: var(--foreground);
-  opacity: 0.82;
 }
 
 .project-status {
@@ -57,7 +65,6 @@
 
 .repository-link {
   margin-top: 6px;
-  font-weight: 550;
 }
 
 /* Flat tonal media stage — separated by tone alone, zero border, zero shadow */
@@ -158,10 +165,10 @@
 }
 
 .gallery-indicator button[aria-pressed="true"] span {
-  background: var(--accent);
+  background: var(--amber);
   opacity: 1;
   width: 18px;
-  border-radius: 3px;
+  border-radius: 999px;
 }
 
 .draft-label,
@@ -176,10 +183,10 @@
 
 @media (min-width: 1024px) {
   .work-section {
-    padding-block: 72px 48px;
+    padding-block: 80px 56px;
   }
   .project-list {
-    gap: 72px;
+    gap: 68px;
   }
   .project-item {
     grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
